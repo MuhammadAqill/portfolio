@@ -5,7 +5,7 @@ $(window).scroll(function () {
   console.log(wScroll);
 
   $('.jumbotron img').css({
-    transform: 'translate(0px, ' + wScroll / 6 + '%)',
+    transform: 'translate(0px, ' + wScroll / 2.5 + '%)',
   });
 
   $('.jumbotron h1').css({

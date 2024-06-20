@@ -1,6 +1,8 @@
 .jumbotron {
   padding-top: 6rem;
   background-color: #373a40;
+  padding-bottom: 50px;
+  overflow: hidden;
 }
 
 #projects,
