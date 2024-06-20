@@ -1,14 +1,18 @@
-function checkBackgroundAttachment() {
-  const jumbotron = document.querySelector('.jumbotron');
-  if (window.innerWidth <= 768) {
-    jumbotron.style.backgroundAttachment = 'scroll';
-  } else {
-    jumbotron.style.backgroundAttachment = 'fixed';
-  }
-}
+// parallax
+$(window).scroll(function () {
+  var wScroll = $(this).scrollTop();
 
-// Check on initial load
-checkBackgroundAttachment();
+  console.log(wScroll);
 
-// Check on window resize
-window.addEventListener('resize', checkBackgroundAttachment);
+  $('.jumbotron img').css({
+    transform: 'translate(0px, ' + wScroll / 2.5 + '%)',
+  });
+
+  $('.jumbotron h1').css({
+    transform: 'translate(0px, ' + wScroll / 1.5 + '%)',
+  });
+
+  $('.jumbotron p').css({
+    transform: 'translate(0px, ' + wScroll + '%)',
+  });
+});

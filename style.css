@@ -1,11 +1,6 @@
 .jumbotron {
   padding-top: 6rem;
-  background-color: #000000;
-  background-image: url(img/jumbotron/background);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background-color: #373a40;
 }
 
 #projects,
