@@ -1,7 +1,8 @@
 // parallax
 $(window).scroll(function () {
   var wScroll = $(this).scrollTop();
-  var speedFactor = 1.2, speedFactor1 = 2;
+  var speedFactor = 1.2;
+  var speedFactor1 = 2;
 
   console.log(wScroll);
 
@@ -10,10 +11,10 @@ $(window).scroll(function () {
   });
 
   $('.jumbotron h1').css({
-    transform: 'translate(0px, ' + (wScroll * speedFactor) + '%)'
+    transform: 'translate(0px, ' + wScroll * speedFactor + '%)',
   });
 
   $('.jumbotron p').css({
-    transform: 'translate(0px, ' + (wScroll * speedFactor1) + '%)',
+    transform: 'translate(0px, ' + wScroll * speedFactor1 + '%)',
   });
 });
