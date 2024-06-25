@@ -25,3 +25,69 @@ footer {
 section {
   padding-top: 5rem;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* overlay */
+
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 99999999;
+  text-align: center;
+  line-height: 680px;
+  padding: 70px;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background: rgb(47, 46, 46, 1);
+}
+
+.overlay img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000000;
+}
+
+.overlay:target img {
+  animation: zoomAndfade 200ms;
+}
+
+/* close */
+
+.close {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.overlay:target .close {
+  bottom: 0;
+  right: 0;
+}
+
+/* animation */
+
+@keyframes zoomAndfade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
